@@ -1,0 +1,240 @@
+.containerbooking {
+  width: 1000px;
+  background-color: black;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: auto;
+  border: 5px solid #e3c276;
+}
+
+.step-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.step-header div {
+  width: 20%;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  color: #aaa;
+}
+
+.step-header .active {
+  background-color: #e3c276;
+  color: white;
+  font-weight: bold;
+  border-color: #e3c276;
+}
+
+.step {
+  display: none;
+}
+
+.step.active {
+  display: block;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  font-weight: bold;
+  width: 100%;
+  display: block;
+  margin-bottom: 5px;
+  color: white;
+}
+
+.flex-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-item {
+  width: 48%;
+}
+
+.input-group input, .input-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.btn {
+  padding: 10px 15px;
+  cursor: pointer;
+  display: inline-block;
+  background-color: #e3c276;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+}
+.button-container {
+  text-align: right;
+}
+.newbannerbooking{
+  padding: 150px 0px 0px 230px;
+}
+
+
+.details-section h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #e3c276;
+  border-bottom: 1px solid #e3c276;
+}
+
+.details-section p {
+  margin: 5px 0;
+  line-height: 1.6;
+  color: white;
+}
+
+.info-row {
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  background-color: #f0f0f0;
+  margin: 10px 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.optional-extras, .rate-section {
+  width: 50%;
+  padding: 10px;
+}
+.rate-section h3{
+  color: #e3c276;
+}
+.rate-section p{
+  color: white;
+}
+
+
+.optional-extras h3, .rate-section h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #e3c276;
+  padding-bottom: 5px;
+}
+
+.optional-extras p, .rate-section p {
+  margin: 10px 0;
+}
+
+.total, .fees {
+  font-weight: bold;
+  color: #d9534f;
+}
+
+.price {
+  color: #333;
+  font-weight: bold;
+  float: right;
+}
+
+.total-price {
+  font-size: 24px;
+  color: #333;
+}
+.containerdetails {
+  display: flex;
+  gap: 20px;
+}
+
+.left-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.image-section {
+  width: 100%;
+}
+
+.details-section {
+  margin-top: 20px;
+}
+
+.car-details-inline {
+  display: flex; /* Align items in a single line */
+  gap: 15px; /* Add spacing between elements */
+  align-items: center; /* Align items vertically */
+}
+
+.car-details-inline h3, 
+.car-details-inline p {
+  margin: 0; /* Remove default margins */
+  padding: 0; /* Remove default padding */
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+
+@media (max-width: 768px) {
+  /* Container - Adjust width and padding for mobile */
+  .containerbooking {
+    width: 100%; /* Full width for mobile */
+    padding: 15px; /* Reduce padding for smaller screens */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+  }
+
+  /* Step Header - Stack steps on mobile */
+  .step-header {
+    flex-wrap: wrap; /* Allow steps to wrap */
+    gap: 10px; /* Add spacing between steps */
+  }
+
+  .step-header div {
+    width: 100%; /* Each step takes full width on mobile */
+    margin-bottom: 10px; /* Add space between stacked steps */
+  }
+
+  /* Flex Items - Stack inputs vertically */
+  .flex-row {
+    flex-wrap: wrap; /* Allow input groups to wrap */
+  }
+
+  .flex-item {
+    width: 100%; /* Full width for mobile */
+    margin-bottom: 10px; /* Add space between stacked inputs */
+  }
+
+  /* Button - Center for mobile */
+  .button-container {
+    text-align: center; /* Center buttons */
+    margin-top: 15px; /* Add spacing above buttons */
+  }
+
+  /* Step 3 Content - Stack sections vertically for mobile */
+  .containerdetails {
+    flex-direction: column; /* Stack left-column and rate-section vertically */
+    gap: 20px; /* Add spacing between stacked sections */
+  }
+
+  .left-column,
+  .rate-section {
+    width: 100%; /* Full width for mobile */
+  }
+
+  /* Image - Ensure responsiveness */
+  .image-section img {
+    width: 100%; /* Make images responsive */
+    border-radius: 5px; /* Keep rounded corners */
+  }
+  .newbannerbooking {
+    padding: 235px 0px 0px 0px;
+}
+.input-group label {
+  color: white;
+}
+}

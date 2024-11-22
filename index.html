@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Three Equal Sections with Cars</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+ 
+</head>
+<body>
+  <header class="header">
+    <div class="logo"> <a href="index.html">
+      <img src="images/logo.png" alt="Logo" id="logoGif">
+  </a></div>
+    <nav class="nav">
+      <ul class="nav-links">
+        <li><a href="#section1">Home</a></li>
+        <li><a href="#section2">About</a></li>
+        <li><a href="#Economy">Our Services <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="Pages/pointpickup.html">Point to Point pickup</a></li>
+            <li><a href="Pages/airporttransfer.html">Airport Transfer</a></li>
+            <li><a href="Pages/corporatetransfer.html">Corporate Transfer</a></li>
+            <li><a href="Pages/wedding.html">Weddings</a></li>
+            <li><a href="Pages/events.html">Events</a></li>
+          </ul>
+        </li>
+        <li><a href="#section3">Our Fleet <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="Pages/firstclass.html">First Class</a></li>
+            <li><a href="Pages/economyclass.html">Economy Class</a></li>
+            <li><a href="Pages/businessclass.html">Business Class</a></li>
+            <li><a href="Pages/vansuv.html">Van/SUV</a></li>
+            <li><a href="Pages/ev.html">EV</a></li>
+          </ul>
+        </li>
+        <!-- <li><a href="#Economy">Economy Fleet</a></li> -->
+        <li><a href="#contact">Contact</a>
+        </li>
+      </ul>
+      <button class="action-button" onclick="navigateToPage('booking.html')">Book Ride</button>
+      <button class="close-menu" onclick="closeMenu()">✖</button>
+    </nav>
+    
+    <div class="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+  
+  <!-- <div class="container"> -->
+    <section class="section" id="section1">
+      <div class="content"></div>
+      <img src="images/car-image.png" alt="Car 1" class="car car-bottom-center">
+    </section>
+    <section class="section section2" id="section2">
+      <div class="content"> 
+        <div class="header-container">
+          <div class="overlay">
+              <h2>About Us</h2>
+          </div>
+      </div>
+       <p class="content-about-p"> At our car rental service, we’re committed to delivering exceptional transportation solutions
+          tailored to meet your every need. From our economy fleet for everyday travel to our luxury fleet
+          for those special occasions, we cater to a wide range of preferences and events. Whether it’s a
+          sophisticated vehicle for your wedding, a comfortable ride for scenic tours, reliable corporate
+          travel, or a timely airport pickup, we ensure quality, reliability, and style.
+          Our priority is to make every journey memorable and seamless, so you can sit back, relax, and enjoy
+          the ride. </p>
+      </div>
+      <img src="images/car-image1.png" alt="Car 2" class="car car-section2">
+    </section>
+    <section class="section section3" id="section3">
+      <div class="content">
+        <h2>Our Fleet</h2>
+        <p>Wherever the road takes you, our fleet gets you there in style and comfort.</p>
+      </div>
+      <img src="images/car-image2.png" alt="Car 3" class="car car-center-above-line">
+    </section>
+    <section id="Economy" class="luxury economy">
+      <div class="content">
+        <h2>Our Services</h2>
+      </div>
+      <div class="carousel-container">
+        <div class="carousel">
+          <div class="carousel-item carousel-item-service">
+            <img src="images/pointpickup.png" alt="Car 1" style="width: 25%;">
+            <i class="fa-light fa-house-laptop" style="width: 25%;"></i>
+            <div class="car-details">
+              <h3>Point to Point Pickup</h3>
+              <p>Reliable and comfortable point-to-point car pickup service tailored to meet your travel needs with ease and style.</p>
+              <button class="bookride" onclick="navigateToPage('Pages/pointpickup.html')">Read More</button>
+            </div>
+          </div>
+          <div class="carousel-item carousel-item-service">
+            <img src="images/airport.png" alt="Car 1" style="width: 25%;">
+            <div class="car-details">
+              <h3>Airport Transfer</h3>
+              <p>Seamless and punctual airport transfer services, ensuring a stress-free journey to or from the terminal.</p>
+              <button class="bookride" onclick="navigateToPage('Pages/airporttransfer.html')">Read More</button>
+            </div>
+          </div>
+          <div class="carousel-item carousel-item-service">
+            <img src="images/corporate.png" alt="Car 1" style="width: 25%;">
+            <div class="car-details">
+              <h3>Corporate Transfer</h3>
+              <p>Professional and efficient corporate transfer services designed to meet your business travel needs with class and reliability.</p>
+              <button class="bookride" onclick="navigateToPage('Pages/corporatetransfer.html')">Read More</button>
+            </div>
+          </div>
+          <div class="carousel-item carousel-item-service">
+            <img src="images/wedding.png" alt="Car 1" style="width: 25%;">
+            <div class="car-details">
+              <h3>Weddings</h3>
+              <p>Elegant and luxurious wedding transfer services, making your special day truly unforgettable.</p>
+              <button class="bookride" onclick="navigateToPage('Pages/wedding.html')">Read More</button>
+            </div>
+          </div>
+          <div class="carousel-item carousel-item-service">
+            <img src="images/event.png" alt="Car 1" style="width: 25%;">
+            <div class="car-details">
+              <h3>Events</h3>
+              <p>Dependable and stylish event transfer services, ensuring you arrive on time and in comfort.</p>
+              <button class="bookride" onclick="navigateToPage('Pages/events.html')">Read More</button>
+            </div>
+          </div>
+       </div>
+      </div>
+      
+    </section>
+    <!-- contact section -->
+   <div id="contact" class="contact">
+    <div class="content">
+      <h2>Contact</h2>
+    </div>
+    <div class="con_bg">
+       <div class="container-fluid">
+          <div class="row">
+             <div class="col-md-8 offset-md-2">
+                <div class="contact-container">
+                  <div class="contact-item">
+                    <i class="fas fa-headset" style="color: #e3c276;"></i>
+                    <span class="contact-label">Call Us</span>
+                    <span class="contact-detail">+64 221731331</span>
+                 </div>
+                 <div class="contact-item">
+                    <i class="fas fa-envelope"  style="color: #e3c276;"></i>
+                    <span class="contact-label">Email</span>
+                    <span class="contact-detail">bookings@nzblackcars.com</span>
+                 </div>
+               </div>
+              </div>
+             <div class="col-md-12 padding_right2">
+                <div class="map-responsive">
+                   <iframe
+                      src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=Eiffel+Tower+Paris+France"
+                      width="600" height="400" frameborder="0" style="border:0; width: 100%;"
+                      allowfullscreen></iframe>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+ <footer class="footer">
+  <div class="footer-container">
+    <!-- Logo and Description -->
+    <div class="footer-column">
+      <img src="images/logo.png" alt="Logo" class="footer-logo">
+      <p class="footer-p">
+        Experience exceptional transportation with NZ Black Cars, where quality, reliability, and style make every journey memorable from economy travel to luxury occasions.
+      </p>
+    </div>
+
+    <!-- Address -->
+    <div class="footer-column">
+      <h3>Address</h3>
+      <!-- <p>Healing Center, 176 W Street Name,</p>
+      <p>Loram ipsum</p> -->
+      <p><a href="tel:221731331" style="color: #c6925f; text-decoration: none;">(+64) 221731331</a></p>
+      <!-- <p>(+71) 8522369417</p> -->
+      <p>bookings@nzblackcars.com</p>
+    </div>
+
+    <!-- Links -->
+    <div class="footer-column">
+      <h3>Links</h3>
+      <ul>
+        <li><a href="#section1">Home</a></li>
+        <li><a href="#section2">About</a></li>
+        <li><a href="#Economy">Our Services</a></li>
+        <li><a href="#section3">Our Fleet</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Book Ride -->
+    <div class="footer-column">
+      <h3>Book Ride Now</h3>
+      <button class="book-now-btn" onclick="navigateToPage('booking.html')">Book Now</button>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/nz_blackcars_tours_transfers/?igsh=M3VmNXFjemVsZzln"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2024 NZ Black Cars. <br>Design by: <a href="https://revolutionhub.co.nz" style="color:#c6925f;text-decoration:none;">Revolution Hub</a> </p>
+  </div>
+</footer>
+
+ 
+  <!-- </div> -->
+  
+  <script src="script.js"></script>
+</body>
+</html>

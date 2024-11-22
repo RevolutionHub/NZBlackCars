@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Three Equal Sections with Cars</title>
+   <link rel="stylesheet" href="../styles.css">
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body style="background: black;">
+   <header class="header">
+      <div class="logo"> <a href="../index.html">
+         <img src="../images/logo.png" alt="Logo" id="logoGif">
+     </a></div>
+      <nav class="nav">
+         <ul class="nav-links">
+            <li><a href="../index.html#section1">Home</a></li>
+            <li><a href="../index.html#section2">About</a></li>
+            <li><a href="../index.html#Economy">Our Services <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="pointpickup.html">Point to Point pickup</a></li>
+                    <li><a href="airporttransfer.html">Airport Transfer</a></li>
+                    <li><a href="corporatetransfer.html">Corporate Transfer</a></li>
+                    <li><a href="wedding.html">Weddings</a></li>
+                    <li><a href="events.html">Events</a></li>
+                </ul>
+              </li>
+              <li><a href="../index.html#section3">Our Fleet <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="firstclass.html">First Class</a></li>
+                    <li><a href="economyclass.html">Economy Class</a></li>
+                    <li><a href="businessclass.html">Business Class</a></li>
+                    <li><a href="vansuv.html">Van/SUV</a></li>
+                    <li><a href="ev.html">EV</a></li>
+                </ul>
+              </li>
+            <li><a href="../index.html#contact">Contact</a></li>
+         </ul>
+         <button class="action-button" onclick="navigateToPage('../booking.html')">Book Ride</button>
+         <button class="close-menu" onclick="closeMenu()">✖</button>
+      </nav>
+
+      <div class="menu-toggle">
+         <span></span>
+         <span></span>
+         <span></span>
+      </div>
+   </header>
+
+   <section class="service-section">
+    <div class="service-photo-container">
+      <img src="../images/corporate.png" alt="Service EveryClass">
+    </div>
+    <div class="service-content-container">
+      <h2>Corporate Transfer</h2>
+      <p>
+        Elevate your business travel experience with our premium Corporate Transfer services. Designed for professionals, our service ensures punctuality, comfort, and efficiency for your corporate needs. Whether it’s meetings, events, or airport transfers, our fleet of luxury sedans, SUVs, and vans is equipped with the latest amenities to ensure a seamless and productive journey.</p>
+      <p>Our professional chauffeurs are highly trained to provide exceptional service, prioritizing your time and privacy. From real-time traffic monitoring to route optimization, we ensure every ride is timely and stress-free. For executives and teams alike, our Corporate Transfer service guarantees a reliable and sophisticated travel solution tailored to your business requirements.</p>
+        <button class="service-cta-button" onclick="navigateToPage('../booking.html')">Book Now</button>
+    </div>
+  </section>
+  
+  
+
+
+   <!-- contact section -->
+   <div id="contact" class="contact bottom_cross6">
+      <div class="content">
+         <h2>Contact</h2>
+      </div>
+      <div class="con_bg">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-md-8 offset-md-2">
+                  <div class="contact-container">
+                     <div class="contact-item">
+                        <i class="fas fa-headset" style="color: #d0a933;"></i>
+                        <span class="contact-label">Call Us</span>
+                        <span class="contact-detail">+64 221731331</span>
+                     </div>
+                     <div class="contact-item">
+                        <i class="fas fa-envelope" style="color: #d0a933;"></i>
+                        <span class="contact-label">Email</span>
+                        <span class="contact-detail">bookings@nzblackcars.com</span>
+                     </div>
+                     <!-- <div class="contact-item">
+                      <i class="fas fa-map-marker-alt"  style="color: #d0a933;"></i>
+                      <span class="contact-label">Address</span>
+                      <span class="contact-detail">35 Kotuku Crescent, Takanini<br>Auckland</span>
+                   </div> -->
+                  </div>
+               </div>
+               <div class="col-md-12 padding_right2">
+                  <div class="map-responsive">
+                     <iframe
+                        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=Eiffel+Tower+Paris+France"
+                        width="600" height="400" frameborder="0" style="border:0; width: 100%;"
+                        allowfullscreen></iframe>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <footer class="footer">
+      <div class="footer-container">
+         <!-- Logo and Description -->
+         <div class="footer-column">
+            <img src="../images/logo.png" alt="Logo" class="footer-logo">
+            <p class="footer-p">
+               Experience exceptional transportation with NZ Black Cars, where quality, reliability, and style make
+               every journey memorable from economy travel to luxury occasions.
+            </p>
+         </div>
+
+         <!-- Address -->
+         <div class="footer-column">
+            <h3>Address</h3>
+            <!-- <p>Healing Center, 176 W Street Name,</p>
+      <p>Loram ipsum</p> -->
+            <p><a href="tel:221731331" style="color: white; text-decoration: none;">(+64) 221731331</a></p>
+            <!-- <p>(+71) 8522369417</p> -->
+            <p>bookings@nzblackcars.com</p>
+         </div>
+
+         <!-- Links -->
+         <div class="footer-column">
+            <h3>Links</h3>
+            <ul>
+                <li><a href="../index.html#section1">Home</a></li>
+                <li><a href="../index.html#section2">About</a></li>
+                <li><a href="../index.html#Economy">Our Services</a></li>
+                <li><a href="../index.html#section3">Our Fleet</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+         </div>
+
+         <!-- Book Ride -->
+         <div class="footer-column">
+            <h3>Book Ride Now</h3>
+            <button class="book-now-btn" onclick="navigateToPage('../booking.html')">Book Now</button>
+            <div class="social-icons">
+               <a href="#"><i class="fab fa-facebook"></i></a>
+               <a href="https://www.instagram.com/nz_blackcars_tours_transfers/?igsh=M3VmNXFjemVsZzln"><i class="fab fa-instagram"></i></a>
+            </div>
+         </div>
+      </div>
+
+      <div class="footer-bottom">
+         <p>© 2024 NZ Black Cars. <br>Design by: <a href="https://revolutionhub.co.nz"
+               style="color:#c6925f;text-decoration:none;">Revolution Hub</a> </p>
+      </div>
+   </footer>
+
+
+   <!-- </div> -->
+   <script src="../script.js"></script>
+
+</body>
+
+</html>
