@@ -541,6 +541,9 @@ html {
   background: black;
   margin-top: 100px;
 }
+.paddingluxury{
+  margin-top: 0px!important;
+}
 .economy{
   background: black;
   margin-top: 0px!important;
@@ -822,9 +825,20 @@ html {
   .service-content-container h2 {
     font-size: 30px !important;
   }
+  .paddingfirstclass{
+    padding-left: 0px!important;
+    }
+    .paddingbusinessclass{
+      padding-left: 0px!important;
+    }
+    .styleblock{
+      display: flex!important;
+    }
 }
 /**footer end**/
-
+.styleblock{
+  display: none;
+}
 /* Position and style the dropdown menu */
 .nav-links li {
   position: relative; /* Ensures the dropdown menu is positioned relative to the parent <li> */
@@ -931,4 +945,11 @@ html {
 
 .service-cta-button:hover {
   background-color: #e3c276;
+}
+
+.paddingfirstclass{
+padding-left: 250px;
+}
+.paddingbusinessclass{
+  padding-left: 500px;
 }

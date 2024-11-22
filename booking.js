@@ -138,3 +138,16 @@ document.getElementById('bookingdetails').addEventListener('submit', function(ev
 
 
 
+document.addEventListener('DOMContentLoaded', () => {
+  const carousel = document.querySelector('.carousel');
+  const prevBtn = document.getElementById('prev-btn');
+  const nextBtn = document.getElementById('next-btn');
+
+  prevBtn.addEventListener('click', () => {
+    carousel.scrollBy({ left: -carousel.clientWidth, behavior: 'smooth' });
+  });
+
+  nextBtn.addEventListener('click', () => {
+    carousel.scrollBy({ left: carousel.clientWidth, behavior: 'smooth' });
+  });
+});
