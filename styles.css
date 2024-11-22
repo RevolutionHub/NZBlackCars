@@ -485,7 +485,7 @@ html {
 }
 
 .carousel-item {
-  flex: 0 0 calc(33.333% - 10px); /* Show 3 items at a time on larger screens */
+  flex: 0 0 calc(32.333% - 15px); /* Show 3 items at a time on larger screens */
   background: black;
   border: 1px solid black;
   border-radius: 10px;
