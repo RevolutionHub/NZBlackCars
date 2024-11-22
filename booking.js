@@ -47,6 +47,8 @@ function submitStep1() {
   formData.dropoffDate = document.querySelector('#step1 .flex-row:nth-child(6) .flex-item:nth-child(1) input').value;
   formData.dropoffTime = document.querySelector('#step1 .flex-row:nth-child(6) .flex-item:nth-child(2) input').value;
   formData.dropoffdatetime = formData.dropoffDate + formData.dropoffTime;
+ 
+
   // Proceed to Step 2
   nextStep();
 }
@@ -59,10 +61,17 @@ function selectVehicle(selectedCar,imgsrc) {
   formData.fuel = selectedCar.querySelector('p:nth-child(3)').innerText;
   formData.price = selectedCar.querySelector('p:nth-child(4)').innerText;
   formData.dynamicsrc = imgsrc;
+  const length = Object.keys(formData).length;
     
+  if(length > 5){
   // Proceed to Step 3 and populate data
+ 
   populateStep3();
   nextStep();
+  }
+  else{
+    alert("Please fill step 1 request form.");
+  }
 }
 
 // Function to populate Step 3
