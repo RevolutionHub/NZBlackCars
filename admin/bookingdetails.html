@@ -35,7 +35,7 @@
             </button>
           </div>
           <div class="navbar-menu-wrapper d-flex align-items-center"  style="background-color: #181824;">
-            <h5 class="mb-0 font-weight-medium d-none d-lg-flex" style="    color: green;">Welcome to Kaki Ka Kitchen dashboard!</h5>
+            <h5 class="mb-0 font-weight-medium d-none d-lg-flex" style="    color: green;">Welcome to NZ Black Cars!</h5>
             <ul class="navbar-nav navbar-nav-right">
             </ul>
             <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas" style="    color: green;">
@@ -56,28 +56,16 @@
                   <div class="dot-indicator bg-success"></div>
                 </div>
                 <div class="text-wrapper">
-                  <p class="profile-name">Kaki Ka Kitchen</p>
+                  <p class="profile-name">NZ Black Cars</p>
                   <p class="designation">Administrator</p>
                 </div>
               </a>
             </li>
            
-            <li class="nav-item nav-category"><span class="nav-link">Orders</span></li>
-            <li class="nav-item">
-              <a class="nav-link" href="delivery.html">
-                <span class="menu-title" id="deliveryCount">Delivery</span>
-                <i class="icon-grid menu-icon"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="click&collect.html">
-                <span class="menu-title" id="clickcollectcount">Click & Collect</span>
-                <i class="icon-grid menu-icon"></i>
-              </a>
-            </li>
+            <li class="nav-item nav-category"><span class="nav-link">Booking Details</span></li>
             <li class="nav-item">
               <a class="nav-link" href="storeorder.html">
-                <span class="menu-title" id="storeordercount">Store Orders</span>
+                <span class="menu-title" id="storeordercount">Booking Orders</span>
                 <i class="icon-grid menu-icon"></i>
               </a>
             </li>
@@ -87,7 +75,7 @@
         <div class="main-panel">
           <div class="content-wrapper">
             <div class="page-header">
-              <h3 class="page-title"> Store Order Details </h3>
+              <h3 class="page-title"> Booking Details </h3>
              </div>
             <div class="row">
               <div class="col-lg-12 grid-margin stretch-card">
@@ -102,15 +90,23 @@
                       <table class="table table-striped">
                         <thead>
                           <tr>
-                            <th> Date </th>
-                            <th> Time </th>
+                            <th> Order Date </th>
+                            <th> Order Time </th>
                             <th> Order No </th>
                             <th> Full Name </th>
                             <th> Email </th>
                             <th> Mobile </th>
                            
-                            <th> Order Details </th>
-                            <th> Total Price </th>
+                            <th> Vehical Name </th>
+                            <th> Seats </th>
+                            <th> Fuel </th>
+                            <th> Pickup Location </th>
+                            <th> Pickup Date </th>
+                            <th> Pickup Time </th>
+                            <th> Dropoff Location </th>
+                            <th> Dropoff Date </th>
+                            <th> Dropoff Time </th>
+                            <th> Price </th>
                           </tr>
                         </thead>
                         <tbody id="data-table-body">
@@ -127,7 +123,7 @@
           <!-- partial:../../partials/_footer.html -->
           <footer class="footer">
             <div class="d-sm-flex justify-content-center justify-content-sm-between">
-              <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">© Kaki Ka Kitchen 2024. </span>
+              <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">© NZ Black Cars 2024. </span>
               <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Design by : <a class="text-danger" href="https://revolutionhub.co.nz/"> Revolution Hub</a></span>
             </div>
           </footer>
@@ -155,52 +151,20 @@
     <script>
    const filterDateInput = document.getElementById("filterDate");
 const tbody = document.getElementById("data-table-body");
-const scriptUrl = "https://script.google.com/macros/s/AKfycbyn3jDHBK-ZJYkaQSo-AU43uY58upxSOk2AtRkBB2fJ17hbLHCG7Wlm5PrYFP4kMjJcFg/exec"; // Replace with your Google Apps Script URL
+const scriptUrl = "https://script.google.com/macros/s/AKfycbx4Kc9NvsPRfpDTehxksXgADuXttiRGaV1G0qHsUNybw625WZonNgM27P2At5nfwyk0FQ/exec"; // Replace with your Google Apps Script URL
 let previousOrderCount = 0; // Track the previous order count
 let isInitialLoad = true; // Flag to prevent alert on first load
 
-let previousOrderCount1 = 0; // Track the previous order count
-let isInitialLoad1 = true; // Flag to prevent alert on first load
-
-let previousOrderCount2 = 0; // Track the previous order count
-let isInitialLoad2 = true; // Flag to prevent alert on first load
    // Function to fetch data and render table rows
 function fetchAndRenderData() {
   fetch(scriptUrl)
     .then(response => response.json())
     .then(data => {
 
-      const Data1 = data.filter(item => item.tablename === "clickcollect");
-      const currentOrderCount1 = Data1.length; 
-     // Calculate the number of new orders
-     const newOrderCount1 = currentOrderCount1 - previousOrderCount1;
+     
 
-   // Show alert if new orders are detected
-    if (!isInitialLoad && newOrderCount1 > 0) {
-      const deliveryCountElement1 = document.getElementById("clickcollectcount");
-      deliveryCountElement1.textContent = `Click & Collect (${newOrderCount1})`; // Update count display
-    }
-
-    previousOrderCount1 = currentOrderCount1; // Update previous order count
-    isInitialLoad1 = false; // Set initial load to false after first fetch
-      
-      const Data2 = data.filter(item => item.tablename === "delivery");
-      const currentOrderCount2 = Data2.length; 
-     // Calculate the number of new orders
-     const newOrderCount2 = currentOrderCount2 - previousOrderCount2;
-
-   // Show alert if new orders are detected
-    if (!isInitialLoad && newOrderCount2 > 0) {
-      const deliveryCountElement2 = document.getElementById("deliveryCount");
-      deliveryCountElement2.textContent = `Delivery (${newOrderCount2})`; // Update count display
-    }
-
-    previousOrderCount2 = currentOrderCount2; // Update previous order count
-    isInitialLoad2 = false; // Set initial load to false after first fetch
-
-
-
-      const deliveryData = data.filter(item => item.tablename === "storeorder");
+   
+    const deliveryData = data.filter(item => item.tablename === "NZ Black Cars");
 
       const currentOrderCount = deliveryData.length; 
      // Calculate the number of new orders
@@ -229,36 +193,7 @@ isInitialLoad = false; // Set initial load to false after first fetch
       filteredData.forEach(item => {
         const row = document.createElement("tr");
 
-        const items = item.orderdetails.split("\n");
-        const itemDetailsTable = `
-          <table style="width: 100%; border-collapse: collapse;">
-            <thead>
-              <tr>
-                <th style="border: 1px solid #ddd; padding: 8px;">Item</th>
-                <th style="border: 1px solid #ddd; padding: 8px;">Quantity</th>
-                <th style="border: 1px solid #ddd; padding: 8px;">Price</th>
-              </tr>
-            </thead>
-            <tbody>
-              ${items.map(detail => {
-                const parts = detail.split(" - ");
-                const itemName = parts[0]?.split(": ")[1] || "";
-                const quantity = parts[1]?.split(": ")[1] || "";
-                const price = parts[2]?.split(": ")[1] || "";
-
-                return `
-                  <tr>
-                    <td style="border: 1px solid #ddd; padding: 8px;">${itemName}</td>
-                    <td style="border: 1px solid #ddd; padding: 8px;">${quantity}</td>
-                    <td style="border: 1px solid #ddd; padding: 8px;">${price}</td>
-                  </tr>
-                `;
-              }).join("")}
-            </tbody>
-          </table>
-        `;
-
-        const date = new Date(item.currentDateTime);
+        const date = new Date(item.orderdatetime);
         const formattedDate = date.toLocaleDateString('en-GB').replace(/-/g, '/');
         const formattedTime = date.toLocaleTimeString('en-US', {
           hour: 'numeric',
@@ -266,15 +201,40 @@ isInitialLoad = false; // Set initial load to false after first fetch
           hour12: true
         }).toLowerCase();
 
+        const pickupdatetime = new Date(item.pickupdatetime);
+        const pickupDate = date.toLocaleDateString('en-GB').replace(/-/g, '/');
+        const pickupTime = date.toLocaleTimeString('en-US', {
+          hour: 'numeric',
+          minute: 'numeric',
+          hour12: true
+        }).toLowerCase();
+
+        const dropoffdatetime = new Date(item.dropoffdatetime);
+        const dropoffDate = date.toLocaleDateString('en-GB').replace(/-/g, '/');
+        const dropoffTime = date.toLocaleTimeString('en-US', {
+          hour: 'numeric',
+          minute: 'numeric',
+          hour12: true
+        }).toLowerCase();
+
+
         row.innerHTML = `
           <td class="py-1">${formattedDate}</td>
           <td>${formattedTime}</td>
           <td>${item.orderno}</td>
-          <td>${item.name}</td>
+          <td>${item.fullname}</td>
           <td>${item.email}</td>
           <td>${item.phone}</td>
-          <td>${itemDetailsTable}</td>
-          <td>${item.total}</td>
+           <td>${item.vehicalname}</td>
+          <td>${item.seats}</td>
+          <td>${item.fuel}</td>
+          <td>${item.pickupaddress}</td>
+          <td>${pickupDate}</td>
+          <td>${pickupTime}</td>
+           <td>${item.dropoffaddress}</td>
+          <td>${dropoffDate}</td>
+          <td>${dropoffTime}</td>
+          <td>${item.price}</td>
         `;
 
         tbody.appendChild(row);

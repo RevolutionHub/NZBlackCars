@@ -42,11 +42,11 @@ function submitStep1() {
   formData.pickupLocation = document.querySelector('#step1 input[placeholder=""]').value;
   formData.pickupDate = document.querySelector('#step1 input[type="date"]').value;
   formData.pickupTime = document.querySelector('#step1 input[type="time"]').value;
-  formData.pickupdatetime = formData.pickupDate + formData.pickupTime;
+  formData.pickupdatetime = formData.pickupDate + " " + formData.pickupTime;
   formData.dropoffLocation = document.querySelector('#step1 input[placeholder=""]').value;
   formData.dropoffDate = document.querySelector('#step1 .flex-row:nth-child(6) .flex-item:nth-child(1) input').value;
   formData.dropoffTime = document.querySelector('#step1 .flex-row:nth-child(6) .flex-item:nth-child(2) input').value;
-  formData.dropoffdatetime = formData.dropoffDate + formData.dropoffTime;
+  formData.dropoffdatetime = formData.dropoffDate + " " + formData.dropoffTime;
  
 
   // Proceed to Step 2
