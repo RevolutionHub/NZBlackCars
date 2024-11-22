@@ -52,13 +52,14 @@ function submitStep1() {
 }
 
 // Function to handle Step 2 selection
-function selectVehicle(selectedCar) {
+function selectVehicle(selectedCar,imgsrc) {
   // Collect Step 2 details from the selected car
   formData.vehicleName = selectedCar.querySelector('h3').innerText;
   formData.seats = selectedCar.querySelector('p:nth-child(2)').innerText;
   formData.fuel = selectedCar.querySelector('p:nth-child(3)').innerText;
   formData.price = selectedCar.querySelector('p:nth-child(4)').innerText;
-
+  formData.dynamicsrc = imgsrc;
+    
   // Proceed to Step 3 and populate data
   populateStep3();
   nextStep();
@@ -67,6 +68,7 @@ function selectVehicle(selectedCar) {
 // Function to populate Step 3
 function populateStep3() {
   // Fill vehicle details
+  document.querySelector('#step3 .image-section').innerHTML = `<img src="${formData.dynamicsrc}" alt="Car Image" style="width: 100%; border-radius: 5px;">`;
   document.querySelector('#step3 .car-details-inline .callname').innerHTML = `${formData.vehicleName}`;
   document.querySelector('#step3 .car-details-inline .seats').innerHTML = `<i class="fa fa-users"></i> ${formData.seats}`;
   document.querySelector('#step3 .car-details-inline .petrol').innerHTML = `<i class="fas fa-gas-pump"></i> ${formData.fuel}`;
