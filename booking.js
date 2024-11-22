@@ -114,7 +114,7 @@ document.getElementById('bookingdetails').addEventListener('submit', function(ev
   event.preventDefault(); // Prevent the default form submission
 
    // Send the form data to Google Apps Script using Fetch API
-  fetch('https://script.google.com/macros/s/AKfycbxsBRRQ2lexzWAWw_bRA7pv1552AWBU_Od0vkzqTBGiZTz0wroMv0x5_ktsWtVTRR2pyQ/exec', {
+  fetch('https://script.google.com/macros/s/AKfycbwJ3MVSBqetVDHA2om1eoo0btkOmGEDvLR0rnocA4WXDRCMHULKiBnfoQgZofrbyP5RsA/exec', {
       method: 'POST',
       headers: {
         "Accept": "application/json",
